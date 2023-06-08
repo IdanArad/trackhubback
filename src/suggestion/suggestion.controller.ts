@@ -16,9 +16,9 @@ import {
 import { SuggestionService } from './suggestion.service';
 import { CreateSuggestionDto } from './dto/create-suggestion.dto';
 import { UpdateSuggestionStatusDto } from './dto/update-suggestion-status.dto';
-import { Username } from 'src/project/dto/username.decorator';
 import { UserService } from 'src/user/user.service';
-import { AuthGuard } from 'src/auth/auth.guard';
+import AuthGuard from '../auth/auth.guard';
+import Username from '../project/dto/username.decorator';
 import { TrackService } from 'src/track/track.service';
 import { UploadTrackDto } from 'src/track/dto/upload-track.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
