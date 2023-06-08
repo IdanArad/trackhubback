@@ -14,9 +14,10 @@ import {
 import { ProjectService } from './project.service';
 import { CreateProjectDto } from './dto/create-project.dto';
 import { UpdateProjectDto } from './dto/update-project.dto';
-import { Username } from './dto/username.decorator';
 import { UserService } from 'src/user/user.service';
-import { AuthGuard } from 'src/auth/auth.guard';
+import AuthGuard from '../auth/auth.guard';
+import Username from './dto/username.decorator';
+
 import { FileInterceptor } from '@nestjs/platform-express';
 import { TrackService } from 'src/track/track.service';
 import { UploadTrackDto } from 'src/track/dto/upload-track.dto';
