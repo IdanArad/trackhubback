@@ -30,7 +30,10 @@ export class SuggestionService {
   }
 
   async findAllOfUser(suggesterId: string) {
-    return await this.suggestionModel.find({suggester: suggesterId}).populate("suggester track").lean();
+    return await this.suggestionModel
+    .find({ suggester: suggesterId })
+    .populate('suggester track project')
+    .lean();
   }
 
   async updateStatus(id: string, updateSuggestionStatusDto: UpdateSuggestionStatusDto) {
